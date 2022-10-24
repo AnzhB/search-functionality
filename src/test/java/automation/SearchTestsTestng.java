@@ -60,7 +60,6 @@ public class SearchTestsTestng {
         WebElement emptyResultsError = driver.findElement(
                 By.xpath("//div[@class = 'search-results__exception-message search-results--empty-result']"));
         Assert.assertTrue("Search results are empty", emptyResultsError.isDisplayed());
-
     }
 
     @AfterMethod(alwaysRun = true)
