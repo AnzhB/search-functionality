@@ -1,0 +1,14 @@
+automation/chromeTest2.class
+automation/ChromeTest.class
+automation/AppTest.class
+automation/SelenideTest.class
+automation/utils/RandomNameGenerator.class
+automation/utils/RandomNameGenerator$1.class
+automation/utils/RandomNameGenerator$Entity.class
+automation/model/enams/Messages.class
+automation/base/Constants.class
+automation/SafariTest.class
+automation/SearchTests.class
+automation/driver/Config.class
+automation/page/BasePage.class
+automation/driver/Driver.class
