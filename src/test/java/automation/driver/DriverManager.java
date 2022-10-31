@@ -1,8 +1,10 @@
 package automation.driver;
 
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -31,14 +33,16 @@ public class DriverManager {
 
     private static WebDriver getRemoteDriver() {
 
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("start-maximized");
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setBrowserName("chrome");
+        capabilities.setPlatform(Platform.MAC);
+        capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
 
         WebDriver driver = null;
         try {
-            driver = new RemoteWebDriver(new URL("http://localhost:9515"), options);
+            driver = new RemoteWebDriver(new URL("http://192.168.201.14:4444"), capabilities);
         } catch (MalformedURLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
         return driver;
     }
