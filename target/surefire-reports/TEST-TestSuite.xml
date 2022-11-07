@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="29.544" tests="3" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="21.706" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="19"/>
     <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/19/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="browser" value="chrome"/>
     <property name="maven.multiModuleProjectDirectory" value="/Users/Anzhalika_Baradzina/Desktop/search/maven"/>
     <property name="java.vm.vendor" value="Homebrew"/>
     <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
@@ -33,6 +34,7 @@
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="12.6"/>
     <property name="library.jansi.path" value="/usr/local/Cellar/maven/3.8.6/libexec/lib/jansi-native"/>
+    <property name="surefire.suiteXmlFiles" value="/Users/Anzhalika_Baradzina/Desktop/search/maven/src/test/java/resources/testng-all.xml"/>
     <property name="user.home" value="/Users/Anzhalika_Baradzina"/>
     <property name="user.timezone" value="Europe/Warsaw"/>
     <property name="file.encoding" value="UTF-8"/>
@@ -41,7 +43,7 @@
     <property name="java.class.path" value="/usr/local/Cellar/maven/3.8.6/libexec/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="19"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dbrowser=chrome -Dsurefire.suiteXmlFiles=/Users/Anzhalika_Baradzina/Desktop/search/maven/src/test/java/resources/testng-all.xml clean test"/>
     <property name="java.home" value="/usr/local/Cellar/openjdk/19/libexec/openjdk.jdk/Contents/Home"/>
     <property name="apple.awt.application.name" value="Launcher"/>
     <property name="user.language" value="en"/>
@@ -58,7 +60,6 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="java.vendor.version" value="Homebrew"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="automation.AppTest" time="13.957"/>
-  <testcase name="testGoogleSearch" classname="automation.ChromeTest" time="0"/>
-  <testcase name="userCanLoginByUsername on userCanLoginByUsername(automation.SelenideTest)" classname="automation.SelenideTest" time="5.209"/>
+  <testcase name="firstSearchResult" classname="automation.testNG.test.SearchTestsTestng" time="5.9"/>
+  <testcase name="searchResultsAreEmpty" classname="automation.testNG.test.SearchTestsTestng" time="2.433"/>
 </testsuite>

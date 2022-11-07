@@ -1,6 +1,8 @@
 package automation.selenide.page;
 
 import com.codeborne.selenide.ElementsCollection;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.util.List;
@@ -21,6 +23,7 @@ public class HomePage extends BasePage{
     private static final String FREQUENT_SEARCH_ITEMS_TEMPLATE = "//ul[@class = 'frequent-searches__items']/li[text()='%s']";
     private static final List<String> FREQUENT_SEARCH_ITEMS = List.of("Blockchain", "Cloud", "DevOps", "Open Source", "RPA", "Automation", "Digital Risk Management", "Contact");
     private ElementsCollection frequentSearchesItems = $$x("//ul[@class = 'frequent-searches__items']/li");
+
 
     public void clickSearchIcon () {
         $x(SEARCH_ICON).click();
