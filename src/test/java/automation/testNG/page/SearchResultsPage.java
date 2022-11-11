@@ -8,6 +8,7 @@ import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -24,9 +25,11 @@ public class SearchResultsPage extends BasePage  {
 
 
     public void verifyFirstSearchResult() {
-        Assert.assertThat(driver.findElement(By.xpath(FIRST_RESULT))
-                .getText(), containsString("testing"));
-        LOGGER.info("first search result contains provided value");
+        assertThat(driver.findElement(By.xpath(FIRST_RESULT))
+                .getText())
+                .as("first search result doesn't contain provided value")
+                .contains("testing");
+        LOGGER.info("first search result verified");
     }
 
     public void verifyEmptySearchResults() {
