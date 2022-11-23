@@ -23,21 +23,16 @@ public class LocalWebDriverFactory implements WebDriverFactory {
     }
 
 
-    @Override
+  @Override
     public  WebDriver create(WebDriverType webDriverType) {
         if (driver == null) {
             switch (webDriverType) {
-                case CHROME:
+                case CHROME ->
                     driver = new ChromeDriver();
-                    break;
-                case SAFARI:
+                case SAFARI ->
                     driver = new SafariDriver();
-                    break;
-                case REMOTE:
+                case REMOTE ->
                     driver = getRemoteDriver();
-
-                default:
-                    throw new RuntimeException("Unsupported browser: " + webDriverType);
             }
         }
         return driver;
