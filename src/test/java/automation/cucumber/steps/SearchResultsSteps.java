@@ -1,6 +1,7 @@
 package automation.cucumber.steps;
 
-import automation.testNG.page.SearchResultsPage;
+
+import automation.cucumber.screens.SearchResultsPage;
 import io.cucumber.java.en.Then;
 
 public class SearchResultsSteps {

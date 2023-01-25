@@ -1,10 +1,11 @@
 package automation.cucumber.hooks;
 
-import automation.testNG.driver.LocalWebDriverFactory;
+import automation.cucumber.driver.LocalWebDriverFactory;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
-import static automation.testNG.driver.WebDriverType.*;
+import static automation.cucumber.driver.WebDriverType.CHROME;
+
 
 public class CucumberHook {
 
@@ -12,7 +13,6 @@ public class CucumberHook {
     public void setupDriver(){
         LocalWebDriverFactory.setWebDriverType(CHROME);
     }
-
 
     @After
     public void quitDriver(){

@@ -1,10 +1,12 @@
 package automation.cucumber.steps;
 
-import automation.testNG.page.HomePage;
+
+import automation.cucumber.screens.HomePage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import static automation.testNG.utils.RandomNameGenerator.getRandomNumber;
+import static automation.cucumber.util.RandomNameGenerator.getRandomNumber;
+
 
 public class HomePageSteps {
 

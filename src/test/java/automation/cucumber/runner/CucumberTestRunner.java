@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
 
         dryRun = false,
         monochrome = true,
-        tags = "@run and @smoke",
+        tags = "@run",
         glue = "automation",
         features ="src/test/java/resources/com/cucumber/Search.feature"
 
